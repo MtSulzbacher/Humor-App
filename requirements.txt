@@ -1,0 +1,7 @@
+
+pandas
+matplotlib
+seaborn
+sqlite3
+tkinter
+pillow
