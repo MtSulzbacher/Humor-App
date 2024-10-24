@@ -14,9 +14,13 @@ def resource_path(relative_path):
         # PyInstaller creates a temp folder and stores path in _MEIPASS
         base_path = sys._MEIPASS
     except Exception:
-        base_path = os.path.abspath(".")
+        base_path = os.path.dirname(os.path.abspath(__file__))  # Usa o diretório do script
 
     return os.path.join(base_path, relative_path)
+
+# Caminho para a imagem usando a função resource_path
+img_path = resource_path("images/angry.png")
+
 
 # Conteúdo de analysis.py
 def generate_report(period='diário'):
